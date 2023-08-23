@@ -1,0 +1,22 @@
+<div class="container">
+<h2><%= @restaurant.name  %></h2>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+<h4>Reviews</h4>
+<% @restaurant.reviews.each do |review| %>
+<ol>
+  <li>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= review.content %></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">by User5136</h6>
+        <p class="card-text"><%= review.rating %>/5</p>
+      </div>
+    </div>
+  </li>
+</ol>
+<% end %>
+<%= render "restaurants/form", restaurant: @restaurant %>
+<%= link_to "Back", restaurants_path %>
+</div>

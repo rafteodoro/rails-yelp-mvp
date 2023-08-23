@@ -30,6 +30,9 @@ gem "jbuilder"
 # Adding easier to do forms
 gem "simple_form"
 
+# Generates fake data
+gem "faker"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
